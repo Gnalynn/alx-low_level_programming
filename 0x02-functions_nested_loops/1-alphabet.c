@@ -1,20 +1,17 @@
 #include "main.h"
 /**
- * main - Entry point
+ * print_alphabet - Prints the alphabet
  *
- * Desription: prints  _putchar and return 0
- *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
-int main(void)
+void print_alphabet(void)
 {
-	int i;
-	char str[] = "_putchar";
+	char alphabet = 'a';
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (alphabet <= 'z')
 	{
-		_putchar(*(str + i));
+		_putchar(alphabet);
+		alphabet++;
 	}
 	_putchar('\n');
-	return (0);
 }
