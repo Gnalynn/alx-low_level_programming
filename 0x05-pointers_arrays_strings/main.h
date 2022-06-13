@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void reset_to_98(int *n);
-int_putchar(char int)
+void reset_to_98(int *m);
+int _putchar(char c);
 
-#endif_MAIN_H
+#endif /* MAIN_H */
