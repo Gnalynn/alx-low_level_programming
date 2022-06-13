@@ -1,18 +1,26 @@
 #include "main.h"
 
 /**
- * print_rev - prints a string in reverse
- * @s: the used string reference pointer
+ * rev_string - prints a string in reverse
+ * @s: the used string to beb reversed
  * Return: 0
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
-	int i = 0;
+	int len, i, half;
+	char temp;
 
-	while (s[i])
+	for (len = 0; s[len] != '\0'; len++)
+	;
+	i = 0;
+	half = len / 2;
+
+	while (half--)
+	{
+		temp = s[len - i - 1];
+		s[len - i - 1] = s[i];
+		s[i] = temp;
 		i++;
-	while (i--)
-		_putchar(s[i]);
-	_putchar('\n');
+	}
 }
