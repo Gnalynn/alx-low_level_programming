@@ -1,12 +1,12 @@
-#include <stdlib.h>
 #include "dog.h"
-
+#include <stdlib.h>
 /**
- * _copy  -   Make a copy of passed in argument
- * @src:      Data to make copy of
- * Return:    Pointer
- */
-
+ * new_dog - creates a new dog.
+ * @name: pointer to a char for name of dog
+ * @age: age of dog
+ * @owner: pointer to a char for owner of dog
+ * Return: pointer to a new dog of type dog_t
+ **/
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int nameLen, ownerLen, i;
