@@ -6,6 +6,7 @@
  * @src:      Data to make copy of
  * Return:    Pointer
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int nameLen, ownerLen, i;
