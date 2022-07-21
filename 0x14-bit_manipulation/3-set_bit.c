@@ -1,15 +1,17 @@
 #include "main.h"
-
+#include "2-get_bit.c"
 /**
- * clear_bit - sets the value of a bit to 0 at a given index
- * @n: pointer to number
- * @index: index to change
- * Return: 1 if it worked or -1 if an error occurred
+ * set_bit - Set a bit at given index
+ * @n: integer
+ * @index: unsigned int
+ * Return: Always 0
  */
-
-int clear_bit(unsigned long int *n, unsigned int index)
-
+int set_bit(unsigned long int *n, unsigned int index)
 {
-	*n = *n & ~(1 << index);
-	return ((index > 8 * sizeof(*n)) ? -1 : 1);
+	if (index > 32)
+		return (-1);
+	(*n) |= 1 << index;
+	if (get_bit((*n), index) == 1)
+		return (1);
+	return (-1);
 }
